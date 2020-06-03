@@ -46,7 +46,7 @@ export class AppComponent {
     this.animations = animations;
   }
 
-  public LoadMore(query: string): void
+  public LoadMore(query: string, rating: string, language: string): void
   {
     if (!this.IsQueryValid(query))
     {
@@ -56,7 +56,7 @@ export class AppComponent {
     const offset = this.chunkSize * this.loadedChunks;
 
     this.animationsAPI
-      .get(query, this.chunkSize, offset, 'G', 'en')
+      .get(query, this.chunkSize, offset, rating, language)
       .subscribe(next => this.HandleLoadMoreResult(next));
 
     this.loadedChunks++;

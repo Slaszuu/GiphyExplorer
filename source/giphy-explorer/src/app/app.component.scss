@@ -1,9 +1,18 @@
-.btn {
-    border-radius: 0;
-    line-height: 2;
-    transition: all 0.25s ease-in-out;
+main {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
 }
-input{
+
+body {
+    background: rgb(174,234,238);
+    background: radial-gradient(circle, rgba(174,234,238,0.46262254901960786) 0%, rgba(8,0,255,0.4150035014005602) 100%);
+}
+
+.row {
+    justify-content: center;
+}
+
+input {
     width: 300px;
 }
 .text-input {
@@ -19,12 +28,26 @@ input{
     outline: none;
 }
 
-.btn:active,
-.btn:focus,
-.btn.active {
-    box-shadow: none;
+.first-wrap,
+.second-wrap,
+.third-wrap {
+    border-radius: 0;
+    border: 1px solid #e5e5e5;
 }
-select,select:active,select:hover,select:focus {
+.second-wrap,
+.third-wrap {
+    border-left: none;
+    outline: none;
+}
+
+.input-select {
+    height: 100%;
+}
+
+select,
+select:active,
+select:hover,
+select:focus {
     outline: none;
     border: none;
     height: 100%;
@@ -35,13 +58,18 @@ select,select:active,select:hover,select:focus {
     cursor: pointer;
 }
 
-.first-wrap,
-.second-wrap,
-.third-wrap {
+.btn {
     border-radius: 0;
-    border: 1px solid #e5e5e5;
+    height: 100%;
+    transition: all 0.25s ease-in-out;
 }
-.second-wrap,.third-wrap{
-    border-left: none;
-    outline: none;
+
+.btn:active,
+.btn:focus,
+.btn.active {
+    box-shadow: none;
+}
+
+.content{
+    margin: 10px;
 }

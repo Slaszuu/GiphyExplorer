@@ -1,5 +1,6 @@
-<div class="container no-gutters mx-auto">
-  <section class="row p-2">
+<body>
+  <div class="container no-gutters mx-auto">
+    <section class="row pt-3">
       <div class="input-field first-wrap">
         <input
           #query
@@ -79,18 +80,19 @@
           SEARCH
         </button>
       </div>
+    </section>
+    <main class="row mt-3">
+      <div class="content" *ngFor="let animation of animations">
+        <img src="{{ animation.url }}" />
+      </div>
 
-  </section>
-  <main class="row">
-    <div *ngFor="let animation of animations">
-      <img src="{{ animation.url }}" />
-    </div>
-
-    <div
-      (scrolled)="LoadMore(query.value)"
-      [infiniteScrollDistance]="2"
-      [infiniteScrollThrottle]="20"
-      infiniteScroll
-    ></div>
-  </main>
-</div>
+      <div
+        class="content"
+        (scrolled)="LoadMore(query.value, rating.value, language.value)"
+        [infiniteScrollDistance]="2"
+        [infiniteScrollThrottle]="20"
+        infiniteScroll
+      ></div>
+    </main>
+  </div>
+</body>
