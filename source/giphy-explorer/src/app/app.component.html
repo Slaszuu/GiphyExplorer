@@ -1,6 +1,6 @@
 <body>
   <div class="container no-gutters mx-auto">
-    <section class="row pt-3">
+    <section class="row pt-3 search-bar">
       <div class="input-field first-wrap">
         <input
           #query
@@ -70,22 +70,23 @@
           </select>
         </div>
       </div>
-
       <div class="input-field fourth-wrap">
         <button
-          class="btn btn-primary"
+          class="btn"
           type="submit"
           (click)="Search(query.value, rating.value, language.value)"
         >
-          SEARCH
+          Search!
         </button>
       </div>
     </section>
     <main class="row mt-3">
       <div class="content" *ngFor="let animation of animations">
         <!-- <div class="author bg-danger">Title: {{ animation.title }}</div> -->
-        <div class="author">Title: {{ animation.title }}</div>
-        <a target="_blank" href="{{ animation.url }}"><img class="gif" src="{{ animation.url }}" /></a>
+        <div class="author gif">Title: {{ animation.title }}</div>
+        <a target="_blank" href="{{ animation.url }}"
+          ><img class="gif" src="{{ animation.url }}"
+        /></a>
       </div>
 
       <div
@@ -97,4 +98,5 @@
       ></div>
     </main>
   </div>
+
 </body>
