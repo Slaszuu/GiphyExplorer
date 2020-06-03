@@ -1,13 +1,90 @@
-<input #query type="text" placeholder="Search.." name="search" >
-<button type="submit" (click)="Search(query.value)" ><i class="fa fa-search"></i></button>
+<div class="container">
+  <section class="row">
+    <div class="input-field first-wrap">
+      <input
+        #query
+        type="text"
+        name="search"
+        placeholder="What are you looking for?"
+      />
+    </div>
 
-<div *ngFor="let animation of animations">
-  <img src={{animation.url}} />
+    <div class="input-field second-wrap">
+      <div class="input-select">
+        <select #rating id="rating" name="rating">
+          <!-- <option value="" placeholder="">Rating</option> -->
+          <option value="G"> G</option>
+          <option value="PG">PG</option>
+          <option value="PG-13">PG-13</option>
+          <option value="R">R</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="input-field third-wrap">
+       <div class="input-select">
+        <select #language id="language" name="language">
+          <!-- N2H > Auto detect language via IP -->
+					<!-- <option value="" selected>Language</option> -->
+
+					<option value="en">English</option>
+					<option value="es">Spanish</option>
+					<option value="pt">Portuguese</option>
+					<option value="id">Indonesian</option>
+
+					<option value="fr">French</option>
+					<option value="ar">Arabic</option>
+					<option value="tr">Turkish</option>
+					<option value="th">Thai</option>
+
+					<option value="vi">Vietnamese</option>
+					<option value="de">German</option>
+					<option value="it">Italian</option>
+					<option value="ja">Japanese</option>
+
+					<option value="zh-CN">Chinese Simplified</option>
+					<option value="zh-TW">Chinese Traditional</option>
+					<option value="ru">Russian</option>
+					<option value="ko">Korean</option>
+
+					<option value="pl">Polish</option>
+					<option value="nl">Dutch</option>
+					<option value="ro">Romanian</option>
+					<option value="hu">Hungarian</option>
+
+					<option value="sw">Swedish</option>
+					<option value="cs">Czech</option>
+					<option value="hi">Hindi</option>
+					<option value="bn">Bengali</option>
+
+					<option value="da">Danish</option>
+					<option value="fa">Farsi</option>
+					<option value="tl">Filipino</option>
+					<option value="fi">Finnish</option>
+
+					<option value="iw">Hebrew</option>
+					<option value="ms">Malay</option>
+					<option value="no">Norwegian</option>
+        </select>
+       </div>
+    </div>
+
+    <div class="input-field fourth-wrap">
+      <button class="btn-search" type="submit" (click)="Search(query.value, rating.value, language.value)">
+        SEARCH
+      </button>
+    </div>
+    <main class="row">
+      <div *ngFor="let animation of animations">
+        <img src="{{ animation.url }}" />
+      </div>
+
+      <div
+        (scrolled)="LoadMore(query.value)"
+        [infiniteScrollDistance]="2"
+        [infiniteScrollThrottle]="20"
+        infiniteScroll
+      ></div>
+    </main>
+  </section>
 </div>
-
-<div
-  (scrolled)="LoadMore(query.value)"
-  [infiniteScrollDistance]="2"
-  [infiniteScrollThrottle]="20"
-  infiniteScroll
->

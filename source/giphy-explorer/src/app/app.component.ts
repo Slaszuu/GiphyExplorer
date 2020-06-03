@@ -17,7 +17,7 @@ export class AppComponent {
   constructor(private animationsAPI: GiphyAPIService) {
   }
 
-  public Search(query: string): void
+  public Search(query: string, rating: string, language: string): void
   {
     if (!this.IsQueryValid(query))
     {
@@ -29,7 +29,7 @@ export class AppComponent {
     const offset = this.chunkSize * this.loadedChunks;
 
     this.animationsAPI
-      .get(query, this.chunkSize, offset, 'G', 'en')
+      .get(query, this.chunkSize, offset, rating, language)
       .subscribe(next => this.HandleSearchResult(next));
 
     this.loadedChunks++;
