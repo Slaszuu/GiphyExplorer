@@ -27,7 +27,7 @@ export class GiphyAPIService {
     const animations: GiphyAnimation[] = [];
 
     for (const data of response.data) {
-      const animation = new GiphyAnimation(data.images.original.url, data.username);
+      const animation = new GiphyAnimation(data.images.original.url, data.title, data.username);
       animations.push(animation);
     }
 

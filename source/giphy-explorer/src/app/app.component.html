@@ -83,8 +83,9 @@
     </section>
     <main class="row mt-3">
       <div class="content" *ngFor="let animation of animations">
-        <div class="author">Author: {{animation.username}}</div>
-        <img class="gif" src="{{ animation.url }}" />
+        <!-- <div class="author bg-danger">Title: {{ animation.title }}</div> -->
+        <a target="_blank" href="{{ animation.url }}"><img class="gif" src="{{ animation.url }}" /></a>
+        <div class="author">Title: {{ animation.title }}</div>
       </div>
 
       <div
