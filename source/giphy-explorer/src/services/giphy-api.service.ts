@@ -3,14 +3,12 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {GiphyAnimation} from '../model/GiphyAnimation';
+import { environment } from './../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GiphyAPIService {
-
-  private baseUrl = 'https://api.giphy.com/v1/gifs/search';
-  private apiKey = '8DPlVsWnDMccSRutTV8kA0S4w8UEIn1v';
 
   constructor(private httpClient: HttpClient) {
   }
@@ -18,7 +16,10 @@ export class GiphyAPIService {
   public get(query: string, limit: number, offset: number, rating: string, language: string): Observable<GiphyAnimation[]>
   {
     const link = this.generateLink(query, limit, offset, rating, language);
-    return this.httpClient.get(link).pipe(map((response: Response) => this.mapResponseToAnimation(response)));
+
+    return this.httpClient
+      .get(link)
+      .pipe(map((response: Response) => this.mapResponseToAnimation(response)));
   }
 
   private mapResponseToAnimation(response: any): GiphyAnimation[]
@@ -35,8 +36,8 @@ export class GiphyAPIService {
 
   private generateLink(query: string, limit: number, offset: number, rating: string, language: string): string
   {
-    return this.baseUrl +
-      '?api_key=' + this.apiKey +
+    return environment.apiUrl + '/search' +
+      '?api_key=' + environment.apiKey +
       '&q=' + query +
       '&limit=' + limit +
       '&offset=' + offset +
