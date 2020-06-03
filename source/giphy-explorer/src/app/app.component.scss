@@ -8,6 +8,15 @@ body {
     background: radial-gradient(circle, rgba(174,234,238,0.46262254901960786) 0%, rgba(8,0,255,0.4150035014005602) 100%);
 }
 
+.author{
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    margin-bottom: 2px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.377);
+    border-radius: 40px;
+}
+
 .row {
     justify-content: center;
 }
@@ -53,7 +62,7 @@ select:focus {
     height: 100%;
     background: #fff;
     border: 0;
-    padding: 10px 32px;
+    padding: 5px 12px;
     color: rgb(100, 100, 100);
     cursor: pointer;
 }

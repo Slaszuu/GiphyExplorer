@@ -15,10 +15,10 @@
         <div class="input-select">
           <select #rating id="rating" name="rating">
             <!-- <option value="" placeholder="">Rating</option> -->
-            <option value="G"> G</option>
-            <option value="PG">PG</option>
-            <option value="PG-13">PG-13</option>
-            <option value="R">R</option>
+            <option value="G">All ages</option>
+            <option value="PG">Parental guidance</option>
+            <option value="PG-13">Parental guidance 13+</option>
+            <option value="R">Restricted</option>
           </select>
         </div>
       </div>
@@ -83,6 +83,7 @@
     </section>
     <main class="row mt-3">
       <div class="content" *ngFor="let animation of animations">
+        <div class="author">Author: {{animation.username}}</div>
         <img src="{{ animation.url }}" />
       </div>
 
