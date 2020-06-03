@@ -4,3 +4,11 @@
 <div *ngFor="let animation of animations">
   <img src={{animation.url}} />
 </div>
+
+<div
+  (scrolled)="LoadMore(query.value)"
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="20"
+  class="search-results"
+  infiniteScroll
+>

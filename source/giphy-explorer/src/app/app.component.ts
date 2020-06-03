@@ -26,6 +26,8 @@ export class AppComponent {
     this.animationsAPI
       .get(query, this.chunkSize, offset, 'G', 'en')
       .subscribe(next => this.HandleSearchResult(next));
+
+    this.loadedChunks++;
   }
 
   private ResetSearch(): void
@@ -37,5 +39,21 @@ export class AppComponent {
   private HandleSearchResult(animations: GiphyAnimation[]): void
   {
     this.animations = animations;
+  }
+
+  public LoadMore(query: string): void
+  {
+    const offset = this.chunkSize * this.loadedChunks;
+
+    this.animationsAPI
+      .get(query, this.chunkSize, offset, 'G', 'en')
+      .subscribe(next => this.HandleLoadMoreResult(next));
+
+    this.loadedChunks++;
+  }
+
+  private HandleLoadMoreResult(animations: GiphyAnimation[]): void
+  {
+    this.animations = this.animations.concat(animations);
   }
 }
