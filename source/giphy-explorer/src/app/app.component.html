@@ -8,6 +8,7 @@
           type="text"
           name="search"
           placeholder="What are you looking for?"
+          (keydown.enter)="Search(query.value, rating.value, language.value)"
         />
       </div>
 
@@ -98,5 +99,4 @@
       ></div>
     </main>
   </div>
-
 </body>
