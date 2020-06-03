@@ -19,6 +19,11 @@ export class AppComponent {
 
   public Search(query: string): void
   {
+    if (!this.IsQueryValid(query))
+    {
+      return;
+    }
+
     this.ResetSearch();
 
     const offset = this.chunkSize * this.loadedChunks;
@@ -43,6 +48,11 @@ export class AppComponent {
 
   public LoadMore(query: string): void
   {
+    if (!this.IsQueryValid(query))
+    {
+      return;
+    }
+
     const offset = this.chunkSize * this.loadedChunks;
 
     this.animationsAPI
@@ -55,5 +65,10 @@ export class AppComponent {
   private HandleLoadMoreResult(animations: GiphyAnimation[]): void
   {
     this.animations = this.animations.concat(animations);
+  }
+
+  public IsQueryValid(query: string): boolean
+  {
+    return !(!query || query === undefined || query === '' || query.length === 0);
   }
 }
