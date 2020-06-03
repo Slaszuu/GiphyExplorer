@@ -7,13 +7,15 @@ body {
     background: rgb(174,234,238);
     background: radial-gradient(circle, rgba(174,234,238,0.46262254901960786) 0%, rgba(8,0,255,0.4150035014005602) 100%);
 }
-
+.gif{
+    box-shadow: 4px 7px 20px -5px rgb(0, 0, 0)
+}
 .author{
     font-family: 'Courier New', Courier, monospace;
     font-style: italic;
     margin-bottom: 2px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.377);
+    background-color: rgba(255, 107, 223, 0.247);
     border-radius: 40px;
 }
 
