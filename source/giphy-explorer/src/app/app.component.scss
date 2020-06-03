@@ -1,3 +1,47 @@
+.btn {
+    border-radius: 0;
+    line-height: 2;
+    transition: all 0.25s ease-in-out;
+}
 input{
-    width: 200px;
+    width: 300px;
+}
+.text-input {
+    height: 100%;
+    border: none;
+    padding-left: 0.5em;
+    background: #fff;
+}
+
+.text-input:active,
+.text-input:focus,
+.text-input.active {
+    outline: none;
+}
+
+.btn:active,
+.btn:focus,
+.btn.active {
+    box-shadow: none;
+}
+select,select:active,select:hover,select:focus {
+    outline: none;
+    border: none;
+    height: 100%;
+    background: #fff;
+    border: 0;
+    padding: 10px 32px;
+    color: rgb(100, 100, 100);
+    cursor: pointer;
+}
+
+.first-wrap,
+.second-wrap,
+.third-wrap {
+    border-radius: 0;
+    border: 1px solid #e5e5e5;
+}
+.second-wrap,.third-wrap{
+    border-left: none;
+    outline: none;
 }
