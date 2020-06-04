@@ -1,14 +1,36 @@
-@keyframes appear{
-    from{
-        opacity: 0;
+@keyframes letsRun {
+    0% {
+        transform: translateX(0vw);
+        transform: rotateZ(180deg);
+        transform: rotateY(180deg);
     }
-    to{
-        opacity: 1;
-        transform: translateY(40vh);
+    50% {
+        transform: translateX(94vw);
+    }
+    100% {
+        transform: translateX(0vw);
+        transform: rotateZ(180deg);
+        transform: rotateY(180deg);
     }
 }
-
-.search-bar{
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        //transform: translateY(40vh);
+    }
+}
+.nyan-row{
+    animation: appear 3s 2s both;
+}
+.nyan {
+    animation: letsRun 5s forwards infinite;
+    width: 120px;
+    height: 120px;
+}
+.search-bar {
     animation: appear 2s both;
 }
 
@@ -49,10 +71,9 @@ img:hover {
     color: white;
 }
 
-.content{
+.content {
     text-align: center;
 }
-
 
 .row {
     justify-content: center;
