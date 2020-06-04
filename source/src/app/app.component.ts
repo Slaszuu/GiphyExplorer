@@ -61,7 +61,7 @@ export class AppComponent {
   }
 
   public IsQueryValid(query: string): boolean {
-    return !(!query || query === undefined || query === '' || query.length === 0);
+    return !(!query || query === undefined || query === '' || query.length === 0 || query === ' ');
   }
 
   //Scroll Up
