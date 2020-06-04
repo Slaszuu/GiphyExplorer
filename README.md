@@ -32,6 +32,6 @@ U can find GiphyExplorer online by following this link:
 ![Gif example](3.png)
 ### Scroll up button:
 ![Scroll up button](4.png)
-### Mobile view example::
+### Mobile view example:
 ![Mobile view](5.png)
 
