@@ -27,11 +27,11 @@ U can find GiphyExplorer online by following this link:
 ### Gallery: Home page overview:
 ![Home](\readmeimg\1.png)
 ### When API response nothing:
-![API response nothing](\readmeimg\2.png)
+![API response nothing](2.png)
 ### Some gif’s examples:
-![Gif example](\readmeimg\3.png)
+![Gif example](3.png)
 ### Scroll up button:
-![Scroll up button](\readmeimg\4.png)
+![Scroll up button](4.png)
 ### Mobile view example::
-![Mobile view](\readmeimg\5.png)
+![Mobile view](5.png)
 
