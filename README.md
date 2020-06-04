@@ -3,7 +3,7 @@
 ![Logo](https://raw.githubusercontent.com/Slaszuu/GiphyExplorer/master/source/src/assets/logo%400.5x.png)
 # GiphyExplorer - simple GIF searching
 
-GiphyExplorer is a simple, responsive GIF searching web application which is using giphy.com API. GiphyExplorer is running in Angular environment. UI has been development in “Vaporwave” sense of style (We all miss 80’!).
+GiphyExplorer is a simple, responsive GIF searching web application which is using giphy.com API. GiphyExplorer is running in Angular environment. UI has been developed in “Vaporwave” sense of style (We all miss 80’!).
 
 ## Features
 
