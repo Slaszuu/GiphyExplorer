@@ -87,12 +87,12 @@
     <main class="row mt-3">
       <div class="content" *ngFor="let animation of animations">
         <!-- <div class="author bg-danger">Title: {{ animation.title }}</div> -->
-        <div class="author gif">Title: {{ animation.title }}</div>
+        <div class="title gif">Title: {{ animation.title }}</div>
         <a target="_blank" href="{{ animation.url }}"
           ><img class="gif" src="{{ animation.url }}"
         /></a>
       </div>
-
+      <div class="nothing-message" *ngIf="animations.length == 0">Nothing found!</div>
       <div
         class="content"
         (scrolled)="LoadMore(query.value, rating.value, language.value)"

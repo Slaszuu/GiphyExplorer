@@ -5,7 +5,7 @@
         transform: rotateY(180deg);
     }
     50% {
-        transform: translateX(94vw);
+        transform: translateX(85vw);
     }
     100% {
         transform: translateX(0vw);
@@ -19,19 +19,29 @@
     }
     to {
         opacity: 1;
-        //transform: translateY(40vh);
     }
 }
 .nyan-row{
-    animation: appear 3s 2s both;
+    animation: appear 2s 1.5s both;
 }
 .nyan {
-    animation: letsRun 5s forwards infinite;
+    animation: letsRun 4.5s forwards infinite;
     width: 120px;
     height: 120px;
 }
 .search-bar {
     animation: appear 2s both;
+}
+
+.nothing-message{
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    margin: 5px;
+    padding: 5px 10px 5px 10px;
+    background-color: rgba(255, 107, 223, 0.247);
+    border-radius: 40px;
 }
 
 main {
@@ -59,7 +69,7 @@ img:hover {
     transition: all 0.5s ease-in-out;
     transform: scale(1.3);
 }
-.author {
+.title {
     font-family: "Courier New", Courier, monospace;
     font-style: italic;
     font-size: 13px;
