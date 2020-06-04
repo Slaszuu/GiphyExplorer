@@ -5,7 +5,7 @@
         transform: rotateY(180deg);
     }
     50% {
-        transform: translateX(85vw);
+        transform: translateX(43vw);
     }
     100% {
         transform: translateX(0vw);
@@ -19,13 +19,16 @@
     }
     to {
         opacity: 1;
+        transform: translateY(25vh);
     }
 }
-.nyan-row{
+.nyan-row {
+    text-align: left;
+    width: 50vw;
     animation: appear 2s 1.5s both;
 }
 .nyan {
-    animation: letsRun 4.5s forwards infinite;
+    animation: letsRun 4.5s both infinite;
     width: 120px;
     height: 120px;
 }
@@ -33,15 +36,21 @@
     animation: appear 2s both;
 }
 
-.nothing-message{
+.nothing-message {
+    animation: appear 2s both;
     font-family: "Courier New", Courier, monospace;
-    color: white;
-    font-size: 16px;
+    color: black;
+    font-size: 20px;
     text-align: center;
     margin: 5px;
     padding: 5px 10px 5px 10px;
-    background-color: rgba(255, 107, 223, 0.247);
+    background-color: rgba(255, 255, 255, 0.25);
     border-radius: 40px;
+}
+
+.angry{
+    width: 200px;
+    height: 200px;
 }
 
 main {
@@ -91,9 +100,9 @@ img:hover {
 
 input {
     width: 300px;
+    line-height: 2.2;
 }
 .text-input {
-    height: 100%;
     border: none;
     padding-left: 0.5em;
     background: #fff;
@@ -128,6 +137,7 @@ select:focus {
     outline: none;
     border: none;
     height: 100%;
+    width: 100%;
     background: #fff;
     border: 0;
     padding: 5px 12px;
@@ -141,6 +151,7 @@ select:focus {
     background: radial-gradient(circle, rgba(174, 234, 238, 0.46262254901960786) -85%, rgba(8, 0, 255, 0.329) 60%);
     border-radius: 0;
     height: 100%;
+    width: 100%;
 }
 
 .btn:active,
@@ -154,4 +165,29 @@ select:focus {
         rgba(174, 234, 238, 0.46262254901960786) -60%,
         rgba(8, 0, 255, 0.4150035014005602) 80%
     );
+}
+
+@media (max-width: 768px) {
+    main {
+        width: fit-content;
+    }
+    .gif {
+        width: 90vw;
+    }
+    .nyan{
+        width: 100px;
+        height: 100px;
+        text-align: left;
+    }
+    .search-bar{
+        display: block;
+        margin: auto;
+    }
+    input{
+        width: 100%;
+    }
+
+    .input-field{
+        margin-top: 5px;
+    }
 }

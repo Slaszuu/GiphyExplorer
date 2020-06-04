@@ -1,5 +1,5 @@
 <body>
-  <div class="nyan-row">
+  <div class="nyan-row mx-auto">
     <img class="nyan" src="\assets\giphy.gif" />
   </div>
   <div class="container no-gutters mx-auto">
@@ -92,7 +92,7 @@
           ><img class="gif" src="{{ animation.url }}"
         /></a>
       </div>
-      <div class="nothing-message" *ngIf="animations.length == 0">Nothing found!</div>
+
       <div
         class="content"
         (scrolled)="LoadMore(query.value, rating.value, language.value)"
@@ -101,5 +101,16 @@
         infiniteScroll
       ></div>
     </main>
+    <div class="nothing-message mx-auto" *ngIf="animations.length < 1">
+      <span style="color: red;">M</span>
+      <span style="color: orange;">Y </span>
+      <span style="color: yellow;">N</span>
+      <span style="color: green;">Y</span>
+      <span style="color: darkcyan;">A</span>
+      <span style="color: darkmagenta;">N</span> power found nothing :/ - Try
+      something else!
+      <br />
+      <img class="angry" src="\assets\angry.gif" />
+    </div>
   </div>
 </body>
