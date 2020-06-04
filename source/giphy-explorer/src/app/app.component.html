@@ -1,6 +1,11 @@
 <body>
+  <div class="text-center">
+    <a href="https://bartoszpanocha.pl">
+      <img class="logo img-fluid" src="\assets\logo@0.5x.png"
+    /></a>
+  </div>
   <div class="nyan-row mx-auto">
-    <img class="nyan" src="\assets\giphy.gif" />
+    <img class="nyan img-fluid" src="\assets\giphy.gif" />
   </div>
   <div class="container no-gutters mx-auto">
     <section class="row pt-3 search-bar">
@@ -87,10 +92,12 @@
     <main class="row mt-3">
       <div class="content" *ngFor="let animation of animations">
         <!-- <div class="author bg-danger">Title: {{ animation.title }}</div> -->
-        <div class="title gif">Title: {{ animation.title }}</div>
-        <a target="_blank" href="{{ animation.url }}"
-          ><img class="gif" src="{{ animation.url }}"
-        /></a>
+        <div class="title">
+          <a class="title-expand" href="#"> Title: {{ animation.title }}</a>
+        </div>
+        <a target="_blank" href="{{ animation.url }}">
+          <img class="gif" src="{{ animation.url }}" />
+        </a>
       </div>
 
       <div
@@ -102,13 +109,16 @@
       ></div>
     </main>
     <div class="nothing-message mx-auto" *ngIf="animations.length < 1">
-      <span style="color: red;">M</span>
-      <span style="color: orange;">Y </span>
-      <span style="color: yellow;">N</span>
-      <span style="color: green;">Y</span>
-      <span style="color: darkcyan;">A</span>
-      <span style="color: darkmagenta;">N</span> power found nothing :/ - Try
-      something else!
+      <div class="nothing-message-text mx-auto p-3">
+        <span style="color: red;">M</span>
+        <span style="color: orange;">Y </span>
+        <span style="color: yellow;">N</span>
+        <span style="color: green;">Y</span>
+        <span style="color: darkcyan;">A</span>
+        <span style="color: darkmagenta;">N</span>
+        power found nothing ;/ <br />
+        Try something else!
+      </div>
       <br />
       <img class="angry" src="\assets\angry.gif" />
     </div>
