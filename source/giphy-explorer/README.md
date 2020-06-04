@@ -1,27 +1,37 @@
-# GiphyExplorer
+# GiphyExplorer - simple GIF searching
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+GiphyExplorer is a simple, responsive GIF searching web application which is using giphy.com API. GiphyExplorer is running in Angular environment. UI has been development in “Vaporwave” sense of style (We all miss 80’!).
+Other technologies used:
 
-## Development server
+   * Typescript
+   * Bootstrap
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+GiphyExplorer allows you to searching for GIF’s in gihpy.com database. You can write your query in text input box, set age range and select language for your query.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## How to use
 
-## Build
+1. Write yourquery in text input box, by which you want to search for gif’s.
+2. Choose age range which is suitable for user (the scale of age ranges is corresponding with American MPAA)
+3. Choose language in which your query is written
+4. Click on “Search!” button, or press enter
+5. You did it!
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## GiphyExplorer home page
 
-## Running unit tests
+U can find GiphyExplorer online by following this link:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+[bartoszpanocha.pl](https://bartoszpanocha.pl)
 
-## Running end-to-end tests
+### Gallery: Home page overview:
+![Home](\readmeimg\1.png)
+### When API response nothing:
+![API response nothing](\readmeimg\2.png)
+### Some gif’s examples:
+![Gif example](\readmeimg\3.png)
+### Scroll up button:
+![Scroll up button](\readmeimg\4.png)
+### Mobile view example::
+![Mobile view](\readmeimg\5.png)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
