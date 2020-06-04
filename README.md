@@ -25,13 +25,13 @@ U can find GiphyExplorer online by following this link:
 [bartoszpanocha.pl](https://bartoszpanocha.pl)
 
 ### Gallery: Home page overview:
-![Home](1.png)
+![Home](1.PNG)
 ### When API response nothing:
-![API response nothing](2.png)
+![API response nothing](2.PNG)
 ### Some gif’s examples:
-![Gif example](3.png)
+![Gif example](3.PNG)
 ### Scroll up button:
-![Scroll up button](4.png)
+![Scroll up button](4.PNG)
 ### Mobile view example:
-![Mobile view](5.png)
+![Mobile view](5.PNG)
 
