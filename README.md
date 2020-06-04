@@ -1,16 +1,16 @@
-# GiphyExplorer - simple GIF searching
+#GiphyExplorer - simple GIF searching
 
 GiphyExplorer is a simple, responsive GIF searching web application which is using giphy.com API. GiphyExplorer is running in Angular environment. UI has been development in “Vaporwave” sense of style (We all miss 80’!).
 Other technologies used:
 
-   * Typescript
-   * Bootstrap
+    Typescript
+    Bootstrap
 
-## Features
+##Features
 
 GiphyExplorer allows you to searching for GIF’s in gihpy.com database. You can write your query in text input box, set age range and select language for your query.
 
-## How to use
+###How to use
 
 1. Write yourquery in text input box, by which you want to search for gif’s.
 2. Choose age range which is suitable for user (the scale of age ranges is corresponding with American MPAA)
@@ -18,20 +18,40 @@ GiphyExplorer allows you to searching for GIF’s in gihpy.com database. You can
 4. Click on “Search!” button, or press enter
 5. You did it!
 
-## GiphyExplorer home page
+####GiphyExplorer home page
 
 U can find GiphyExplorer online by following this link:
 
-[bartoszpanocha.pl](https://bartoszpanocha.pl)
+https://bartoszpanocha.pl
 
-### Gallery: Home page overview:
-![Home](\readmeimg\1.png)
-### When API response nothing:
-![API response nothing](\readmeimg\2.png)
-### Some gif’s examples:
-![Gif example](\readmeimg\3.png)
-### Scroll up button:
-![Scroll up button](\readmeimg\4.png)
-### Mobile view example::
-![Mobile view](\readmeimg\5.png)
+#####Gallery: Home page overview:
+
+
+When API response nothing:
+
+
+
+
+
+
+
+Some gif’s examples:
+
+
+Scroll up button:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mobile view example::
 
