@@ -91,9 +91,9 @@
     </section>
     <main class="row mt-3">
       <div class="content" *ngFor="let animation of animations">
-        <!-- <div class="author bg-danger">Title: {{ animation.title }}</div> -->
         <div class="title">
-          <a class="title-expand" href="#"> Title: {{ animation.title }}</a>
+          {{ animation.title }}
+          <span *ngIf="!IsQueryValid(animation.title)">There's no title!</span>
         </div>
         <a target="_blank" href="{{ animation.url }}">
           <img class="gif" src="{{ animation.url }}" />
@@ -107,6 +107,7 @@
         [infiniteScrollThrottle]="20"
         infiniteScroll
       ></div>
+      <button class="button-up" *ngIf="isShow" (click)="gotoTop()">▲</button>
     </main>
     <div class="nothing-message mx-auto" *ngIf="animations.length < 1">
       <div class="nothing-message-text mx-auto p-3">
@@ -116,7 +117,7 @@
         <span style="color: green;">Y</span>
         <span style="color: darkcyan;">A</span>
         <span style="color: darkmagenta;">N</span>
-        power found nothing ;/ <br />
+        power found nothing :/ <br />
         Try something else!
       </div>
       <br />
