@@ -25,7 +25,7 @@ U can find GiphyExplorer online by following this link:
 [bartoszpanocha.pl](https://bartoszpanocha.pl)
 
 ### Gallery: Home page overview:
-![Home](\readmeimg\1.png)
+![Home](1.png)
 ### When API response nothing:
 ![API response nothing](2.png)
 ### Some gif’s examples:
