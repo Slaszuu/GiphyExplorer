@@ -1,6 +1,6 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
 import { GiphyAPIService } from '../services/giphy-api.service';
-import { GiphyAnimation } from '../Model/GiphyAnimation';
+import { GiphyAnimation } from '../model/GiphyAnimation';
 
 @Component({
   selector: 'app-root',

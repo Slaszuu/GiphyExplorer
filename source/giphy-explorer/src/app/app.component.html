@@ -95,8 +95,12 @@
           {{ animation.title }}
           <span *ngIf="!IsQueryValid(animation.title)">There's no title!</span>
         </div>
-        <a target="_blank" href="{{ animation.url }}">
-          <img class="gif" src="{{ animation.url }}" />
+        <a target="_blank" href="{{ animation.gifUrl }}">
+          <video class="gif" autoplay loop muted playsinline>
+            <source src="{{animation.webpUrl}}" type="video/webp">
+            <source src="{{animation.mp4Url}}" type="video/mp4">
+            <img src="{{ animation.gifUrl }}>
+          </video>
         </a>
       </div>
 

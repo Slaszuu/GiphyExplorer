@@ -1,4 +1,4 @@
 export class GiphyAnimation {
-  constructor(public url: string, public title: string) {
+  constructor(public gifUrl: string, public mp4Url: string, public webpUrl: string,public title: string) {
   }
 }
