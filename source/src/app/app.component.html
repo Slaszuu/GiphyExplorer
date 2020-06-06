@@ -109,7 +109,7 @@
       ></div>
       <button class="button-up" *ngIf="isShow" (click)="gotoTop()">▲</button>
     </main>
-    <div class="nothing-message mx-auto" *ngIf="!animations[0]">
+    <div class="nothing-message mx-auto" *ngIf="!IsAnyAnimationLoaded()">
       <div class="nothing-message-text mx-auto p-3">
         <span style="color: red;">M</span>
         <span style="color: rgb(255, 166, 0);">Y </span>

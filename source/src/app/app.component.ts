@@ -13,6 +13,7 @@ export class AppComponent {
 
   title = 'giphy-explorer';
   animations: GiphyAnimation[];
+  isSearched: boolean = false;
 
   constructor(private animationsAPI: GiphyAPIService) {
   }
@@ -31,6 +32,7 @@ export class AppComponent {
       .subscribe(next => this.HandleSearchResult(next));
 
     this.loadedChunks++;
+    this.isSearched = true;
   }
 
   private ResetSearch(): void {
@@ -63,6 +65,13 @@ export class AppComponent {
   public IsQueryValid(query: string): boolean {
     return !(!query || query === undefined || query === '' || query.length === 0 || query === ' ');
   }
+
+  public IsAnyAnimationLoaded(): boolean {
+    if (this.isSearched && this.animations.length < 1)
+      return false;
+    return true;
+  }
+
   //Scroll Up
   isShow: boolean;
   topPosToStartShowing = 100;
