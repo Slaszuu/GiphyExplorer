@@ -193,6 +193,7 @@ select:focus {
     outline: none;
     background: rgb(0, 238, 255);
     background: radial-gradient(circle, rgba(174, 234, 238, 0.274) 0%, rgba(8, 0, 255, 0.329) 100%);
+    animation: appear .5s both;
 }
 
 @media (max-width: 768px) {
