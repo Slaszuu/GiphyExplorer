@@ -63,7 +63,6 @@ export class AppComponent {
   public IsQueryValid(query: string): boolean {
     return !(!query || query === undefined || query === '' || query.length === 0 || query === ' ');
   }
-
   //Scroll Up
   isShow: boolean;
   topPosToStartShowing = 100;
@@ -72,7 +71,7 @@ export class AppComponent {
   checkScroll() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    console.log('[scroll]', scrollPosition);
+    //console.log('[scroll]', scrollPosition);
 
     if (scrollPosition >= this.topPosToStartShowing) {
       this.isShow = true;
