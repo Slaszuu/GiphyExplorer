@@ -1,40 +1,32 @@
 <body>
-  <header class="text-center">
-    <a href="https://bartoszpanocha.pl">
-      <img class="logo img-fluid" src="\assets\logo@0.5x.png"
-    /></a>
-  </header>
-  <div class="nyan-row mx-auto">
-    <img class="nyan img-fluid" src="\assets\giphy.gif" />
-  </div>
-  <div class="container no-gutters mx-auto">
-    <section class="row pt-3 search-bar">
-      <div class="input-field first-wrap">
-        <input
-          #query
-          class="text-input"
-          type="text"
-          name="search"
-          placeholder="What are you looking for?"
-          (keydown.enter)="Search(query.value, rating.value, language.value)"
-        />
-      </div>
+    <header class="text-center">
+        <a href="https://bartoszpanocha.pl">
+            <img class="logo img-fluid" src="assets/logo@0.5x.png" /></a>
+    </header>
+    <div class="nyan-row mx-auto">
+        <img class="nyan img-fluid" src="assets/giphy.gif" />
+    </div>
+    <div class="container no-gutters mx-auto">
+        <section class="row pt-3 search-bar">
+            <div class="input-field first-wrap">
+                <input #query class="text-input" type="text" name="search" placeholder="What are you looking for?" (keydown.enter)="Search(query.value, rating.value, language.value)" />
+            </div>
 
-      <div class="input-field second-wrap">
-        <div class="input-select">
-          <select #rating id="rating" name="rating">
+            <div class="input-field second-wrap">
+                <div class="input-select">
+                    <select #rating id="rating" name="rating">
             <!-- <option value="" placeholder="">Rating</option> -->
             <option value="G">All ages</option>
             <option value="PG">Parental guidance</option>
             <option value="PG-13">Parental guidance 13+</option>
             <option value="R">Restricted</option>
           </select>
-        </div>
-      </div>
+                </div>
+            </div>
 
-      <div class="input-field third-wrap">
-        <div class="input-select">
-          <select #language id="language" name="language">
+            <div class="input-field third-wrap">
+                <div class="input-select">
+                    <select #language id="language" name="language">
             <!-- N2H > Auto detect language via IP -->
             <!-- <option value="" selected>Language</option> -->
 
@@ -77,51 +69,39 @@
             <option value="ms">Malay</option>
             <option value="no">Norwegian</option>
           </select>
-        </div>
-      </div>
-      <div class="input-field fourth-wrap">
-        <button
-          class="btn"
-          type="submit"
-          (click)="Search(query.value, rating.value, language.value)"
-        >
+                </div>
+            </div>
+            <div class="input-field fourth-wrap">
+                <button class="btn" type="submit" (click)="Search(query.value, rating.value, language.value)">
           Search!
         </button>
-      </div>
-    </section>
-    <main class="row mt-3">
-      <div class="content" *ngFor="let animation of animations">
-        <div class="title">
-          {{ animation.title }}
-          <span *ngIf="!IsQueryValid(animation.title)">There's no title!</span>
-        </div>
-        <a target="_blank" href="{{ animation.gifUrl }}">
-          <img class="gif" src="{{ animation.gifUrl }}" />
-        </a>
-      </div>
+            </div>
+        </section>
+        <main class="row mt-3">
+            <div class="content" *ngFor="let animation of animations">
+                <div class="title">
+                    {{ animation.title }}
+                    <span *ngIf="!IsQueryValid(animation.title)">There's no title!</span>
+                </div>
+                <a target="_blank" href="{{ animation.gifUrl }}">
+                    <img class="gif" src="{{ animation.gifUrl }}" />
+                </a>
+            </div>
 
-      <div
-        class="content"
-        (scrolled)="LoadMore(query.value, rating.value, language.value)"
-        [infiniteScrollDistance]="2"
-        [infiniteScrollThrottle]="20"
-        infiniteScroll
-      ></div>
-      <button class="button-up" *ngIf="isShow" (click)="gotoTop()">▲</button>
-    </main>
-    <div class="nothing-message mx-auto" *ngIf="!IsAnyAnimationLoaded()">
-      <div class="nothing-message-text mx-auto p-3">
-        <span style="color: red;">M</span>
-        <span style="color: rgb(255, 166, 0);">Y </span>
-        <span style="color: yellow;">N</span>
-        <span style="color: rgb(0, 255, 0);">Y</span>
-        <span style="color: rgb(0, 204, 255);">A</span>
-        <span style="color: darkmagenta;">N</span>
-        power found nothing :/ <br />
-        Try something else!
-      </div>
-      <br />
-      <img class="angry" src="\assets\angry.gif" />
+            <div class="content" (scrolled)="LoadMore(query.value, rating.value, language.value)" [infiniteScrollDistance]="2" [infiniteScrollThrottle]="20" infiniteScroll></div>
+            <button class="button-up" *ngIf="isShow" (click)="gotoTop()">▲</button>
+        </main>
+        <div class="nothing-message mx-auto" *ngIf="!IsAnyAnimationLoaded()">
+            <div class="nothing-message-text mx-auto p-3">
+                <span style="color: red;">M</span>
+                <span style="color: rgb(255, 166, 0);">Y </span>
+                <span style="color: yellow;">N</span>
+                <span style="color: rgb(0, 255, 0);">Y</span>
+                <span style="color: rgb(0, 204, 255);">A</span>
+                <span style="color: darkmagenta;">N</span> power found nothing :/ <br /> Try something else!
+            </div>
+            <br />
+            <img class="angry" src="assets/angry.gif" />
+        </div>
     </div>
-  </div>
 </body>
