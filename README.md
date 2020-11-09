@@ -1,4 +1,4 @@
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://bartoszpanocha.pl/) [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://slaszuu.github.io/GiphyExplorer/) [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 ![Logo](https://raw.githubusercontent.com/Slaszuu/GiphyExplorer/master/source/src/assets/logo%400.5x.png)
 # GiphyExplorer - simple GIF searching
@@ -11,7 +11,7 @@ GiphyExplorer allows you to searching for GIF’s in gihpy.com database. You can
 
 ## Demo
 
-**Let's try the search on  [bartoszpanocha.pl](https://bartoszpanocha.pl/) !**
+**Let's try the search on  [slaszuu.github.io/GiphyExplorer/](https://slaszuu.github.io/GiphyExplorer/) !**
 
 ![screen shot](https://raw.githubusercontent.com/Slaszuu/GiphyExplorer/master/readme_resources/3.PNG)
 ## Tech stack
